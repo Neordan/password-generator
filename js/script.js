@@ -23,6 +23,7 @@ const rangeValue = document.getElementById("password-range");
 // Function to generate password
 function generatePassword() {
     let data = [];
+    let password = "";
 
     // Check if lowercase letters should be included
     if (document.getElementById('lowercase').checked) {
@@ -41,6 +42,18 @@ function generatePassword() {
         data.push(...dataSymbols);
     }
 
-    
+    // Generate password
+
+    if (data.length === 0) {
+        // Check if no criteria are selected
+        alert("Please select criteria"); // Display an alert message
+        return; // Exit the function
+    }
+
+        for (let i = 0; i < rangeValue.value; i++) {
+            password += data[Math.floor(Math.random() * data.length)];
+        }
+
+    console.log(password);
 }
 
