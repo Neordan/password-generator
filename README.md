@@ -13,7 +13,7 @@ Ce projet est un générateur de mot de passe simple réalisé en utilisant HTML
 1. Clonez ou téléchargez ce dépôt sur votre machine.
 
 ```bash
-git clone https://github.com/votre-utilisateur/generateur-mot-de-passe.git
+git clone https://github.com/Neordan/password-generator.git
 ```
 
 2. Ouvrez le fichier `index.html` dans votre navigateur web.
