@@ -75,3 +75,54 @@ input[type="range"]::-webkit-slider-thumb:active {
   background: transparent;
   border: none;
 }
+
+.checkbox-container {
+    margin: 36px 0 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  input[type="checkbox"] {
+    display: none;
+  }
+  input[type="checkbox"]:checked + label {
+    transform: scale(1.3);
+    filter: brightness(150%);
+  }
+  label {
+    user-select: none;
+    background-image: linear-gradient(to top, #a0b5cd 0%, #608cc9 100%);
+    height: 60px;
+    width: 60px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.486);
+    transition: 0.2s ease;
+    cursor: pointer;
+  }
+  button {
+    color: #fff;
+    font-weight: 600;
+    margin: 14px 0 20px;
+    background-image: linear-gradient(120deg, #2720f2 0%, #87aeebe2 100%);
+    padding: 10px 20px;
+    border-radius: 150px;
+    border: 2px solid #accbee;
+    border-bottom: 3px solid rgb(32, 22, 173);
+    border-right: 3px solid #87aeebe2;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+  button:hover {
+    border: 2px solid rgb(21, 0, 255);
+    border-bottom: 3px solid #accbee;
+    border-right: 3px solid #accbee;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.32);
+    transform: translateX(3px);
+  }
+  button:active {
+    transform: scale(1.05);
+  }
+  

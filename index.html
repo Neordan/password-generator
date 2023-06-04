@@ -17,7 +17,17 @@
             <input type="range" id="password-range" min="4" max="24" value="6">
             <input type="text" id="display-password-length" value="6" readonly>
         </div>
+        <div class="checkbox-container">
+            <input type="checkbox" id="lowercase" checked>
+            <label for="lowercase">a-z</label>
+            <input type="checkbox" id="uppercase" checked>
+            <label for="uppercase">A-Z</label>
+            <input type="checkbox" id="number" checked>
+            <label for="number">0-9</label>
+            <input type="checkbox" id="symbols" checked>
+            <label for="symbols">!-?</label>
+        </div>
+        <button id="generateButton">Generate the password</button>
     </div>
 </body>
-
 </html>
