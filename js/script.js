@@ -55,7 +55,36 @@ function generatePassword() {
     }
 
     passwordOutput.value = password;
+
 }
+
 
 //Adding an event for the function generatePassword to be executed on click
 generateButton.addEventListener("click", generatePassword);
+
+//Adding an event for the function copyPassword to be executed on click
+
+// Function to copy the password to clipboard
+function copyPassword() {
+    const passwordOutput = document.getElementById('password-output');
+    const password = passwordOutput.value;
+    
+    navigator.clipboard.writeText(password)
+        .catch(function(error) {
+            console.error('An error occurred while copying the password:', error);
+            // You can handle errors or display an appropriate error message here
+        });
+
+        copyButton.textContent = "Copied!";
+
+        // Set a timeout to revert the button text after 2 seconds
+        setTimeout(() => {
+            copyButton.textContent = "Copy the password";
+        }, 2000);
+        
+}
+
+
+const copyButton = document.getElementById('copy-button');
+//Adding an event for the function copyPassword to be executed on click
+copyButton.addEventListener('click', copyPassword);
