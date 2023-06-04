@@ -20,5 +20,27 @@ const dataNumbers = "0123456789";
 const dataSymbols = "$*ù%&é\"'(-è_çà)=^¨£¤*?:;,./§!<>|";
 const rangeValue = document.getElementById("password-range");
 
+// Function to generate password
+function generatePassword() {
+    let data = [];
 
+    // Check if lowercase letters should be included
+    if (document.getElementById('lowercase').checked) {
+        data.push(...dataLowercase);
+    }
+    // Check if uppercase letters should be included
+    if (document.getElementById('uppercase').checked) {
+        data.push(...dataUppercase);
+    }
+    // Check if numbers should be included
+    if (document.getElementById('numbers').checked) {
+        data.push(...dataNumbers);
+    }
+    // Check if symbols should be included
+    if (document.getElementById('symbols').checked) {
+        data.push(...dataSymbols);
+    }
+
+    
+}
 
