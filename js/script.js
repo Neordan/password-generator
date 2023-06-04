@@ -19,6 +19,7 @@ const dataUppercase = dataLowercase.toUpperCase();
 const dataNumbers = "0123456789";
 const dataSymbols = "$*ù%&é\"'(-è_çà)=^¨£¤*?:;,./§!<>|";
 const rangeValue = document.getElementById("password-range");
+const passwordOutput = document.getElementById("password-output");
 
 // Function to generate password
 function generatePassword() {
@@ -43,17 +44,18 @@ function generatePassword() {
     }
 
     // Generate password
-
     if (data.length === 0) {
         // Check if no criteria are selected
         alert("Please select criteria"); // Display an alert message
         return; // Exit the function
     }
 
-        for (let i = 0; i < rangeValue.value; i++) {
-            password += data[Math.floor(Math.random() * data.length)];
-        }
+    for (let i = 0; i < rangeValue.value; i++) {
+        password += data[Math.floor(Math.random() * data.length)];
+    }
 
-    console.log(password);
+    passwordOutput.value = password;
 }
 
+//Adding an event for the function generatePassword to be executed on click
+generateButton.addEventListener("click", generatePassword);
